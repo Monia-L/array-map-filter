@@ -12,10 +12,15 @@ Exemple d'entrée:
 
   Sortie attendue:
   [-10, 5, 15, 20]
-
  */
 
+// getMultiplesOf([-12, -10, -7, -1, 5, 8, 11, 15, 20, 27], 5)
+
+
 function getMultiplesOf(numbers, n) {
+const multiplesOfFive = numbers.filter(number => number % n == 0)
+//  console.log(multiplesOfFive) 
+return multiplesOfFive
 }
 
 // Ne pas modifier l'export

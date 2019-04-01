@@ -59,9 +59,34 @@ En sortie:
 
  */
 
-function getMoviesFreshness(movies) {
-}
 
+// const test = [{name: 'Crazy Rich Asians',rating: 93}, {name: 'Skyscraper',rating: 46}]
+
+
+const getMoviesFreshness = movies => {
+
+
+       const newMovies = movies.map(unObjet => {
+        if (unObjet.rating > 75){
+             unObjet.label= 'certified fresh'       
+             
+        } else if (unObjet.rating < 60) {
+           unObjet.label= 'rotten'
+
+        }else {
+         unObjet.label= 'fresh'
+      }    
+      return unObjet
+    })
+
+    
+    
+  //  console.log(newMovies);
+  return newMovies
+  }
+
+
+// getMoviesFreshness(test)
 
 
 // Ne pas modifier l'export

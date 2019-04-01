@@ -21,12 +21,15 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+const getStringsLength = (strings) => {
+const newString = strings.map(string => `${string} contains ` + string.length + ' characters')
+return newString
+
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
-// console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+//getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']);
 
 // Ne pas modifier l'export
 module.exports = getStringsLength;

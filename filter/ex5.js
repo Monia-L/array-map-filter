@@ -39,7 +39,23 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
-}
+  const revenge = items.filter(item => item.toUpperCase().includes(search.toUpperCase()))
+    
+   console.log(revenge) 
+   return revenge
+ }
+
+
+
+// searchWordFilter([
+//   'Mad Max: Fury Road',
+//   'Interstellar',
+//   'REVENGE of the Nerds',
+//   'revenge of the Pink Panther',
+//   'Star Wars: Episode I - The Phantom Menace',
+//   'Star Wars: Episode II - Attack of the Clones',
+//   'Star Wars: Episode III - Revenge of the Sith'
+// ], 'revenge')
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

@@ -1,6 +1,6 @@
 const filterOffensiveComments = require('../filter/ex6.js');
 
-xdescribe('filter - exercice 6', () => {
+describe('filter - exercice 6', () => {
 
   test('filterOffensiveComments', () => {
     expect(filterOffensiveComments([
@@ -17,4 +17,3 @@ xdescribe('filter - exercice 6', () => {
   });
 
 });
-

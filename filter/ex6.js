@@ -26,8 +26,36 @@ Sortie attendue:
 
 */
 
+
 function filterOffensiveComments(comments, bannedWords) {
+  
+        bannedWords.map(banneWord => {
+
+
+            comments.filter((comment, index) => {
+               
+              if (comment.toLowerCase().includes(banneWord)) {
+                        comments.splice(index, 1)}
+        
+                  })               
+                  })
+                    console.log(comments);
+                    
+                    return comments
+          
+  
+    
+                
 }
+
+  
+// filterOffensiveComments([
+//   "Very useful tutorial, thank you so much!",
+//   "React is not a damn framework, it's a LIBRARY",
+//   "Why you put bloody kitten pictures in a tech tutorial is beyond me!",
+//   "Which one is better, React or Angular?",
+//   'There is no "better", it depends on your use case, DAMN YOU'
+//     ], ['damn', 'bloody'])
 
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;

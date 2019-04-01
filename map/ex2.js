@@ -20,10 +20,17 @@ Exemple d'entrée:
       food: 'Bacon',
       isVegetarian: false
     },
+
+
+
+
+
     {
       food: 'Sausage',
       isVegetarian: false
     },
+
+
     {
       food: 'Tofu',
       isVegetarian: true
@@ -41,9 +48,44 @@ En sortie: [
 ]
 
  */
+// const foods =   [
+//   {
+//     food: 'Bacon',
+//     isVegetarian: false
+//   },
+//   {
+//     food: 'Sausage',
+//     isVegetarian: false
+//   },
+//   {
+//     food: 'Tofu',
+//     isVegetarian: true
+//   },
+//   {
+//     food: 'Chick Pea',
+//     isVegetarian: true
+//   }
+// ]
 
-function getFoodCategories(foods) {
+ const getFoodCategories = (foods) => {
+  const newFood = foods.map(unObjet => {
+      // console.log(unObjet)
+
+
+          if (unObjet.isVegetarian === false) {
+          
+            return unObjet.food + " is not suitable for vegetarians"
+          }
+          
+          else  {
+              return unObjet.food + " is suitable for vegetarians"
+          }
+ })
+ return newFood
 }
+
+
+
 
 
 

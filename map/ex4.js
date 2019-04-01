@@ -50,10 +50,26 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
   }
 ]
 */
+// const circles = [ 1, 2, 7, 11 ]
 
-function getCirclesProperties(radiuses) {
+const getCirclesProperties = (radiuses) => {
+
+  const newTab = radiuses.map(oneRadius => {
+
+      const test = {}
+      test.radius = oneRadius
+       test.circumference = (2 * Math.PI * oneRadius).toFixed(3)
+       test.surface = (Math.PI * oneRadius * oneRadius).toFixed(3)
+      // console.log('test ',test)
+      // console.log ('oneRadius ', oneRadius)
+      return test
+
+
+  })
+  // console.log('newTab ', newTab);
+  
+  return newTab
 }
-
 
 
 // Ne pas modifier l'export
